@@ -53,7 +53,7 @@ private RolPersonalControlador rol;
 		}
 		
 		// eliminar Personal
-		/*@DeleteMapping("/personal/{id}")
+		@DeleteMapping("/personal/{id}")
 		public void borrarPersonal(@PathVariable Integer id) {
 			Personal p = ip.findById(id).orElseThrow();
 			ip.delete(p);
@@ -67,7 +67,8 @@ private RolPersonalControlador rol;
 			p.setNombre(personal.getNombre());
 			p.setApellido(personal.getApellido());
 			p.setDni(personal.getDni());
+			p.setRolpersonal(personal.getRolpersonal());		
 			Personal dato = ip.save(p);
 			return ResponseEntity.ok(dato);
-		}*/
+		}
 }
